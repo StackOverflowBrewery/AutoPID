@@ -33,6 +33,8 @@ class AutoPID {
     double getIntegral();
     void setIntegral(double integral);
 
+    void getGains(double *kp, double* ki, double* kd);
+
   private:
     double _Kp, _Ki, _Kd;
     double _integral, _previousError;

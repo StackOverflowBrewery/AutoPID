@@ -39,6 +39,12 @@ void AutoPID::setGains(double Kp, double Ki, double Kd) {
   _Kd = Kd;
 }//AutoPID::setControllerParams
 
+void AutoPID::getGains(double *kp, double* ki, double* kd) {
+  *kp = _Kp;
+  *ki = _Ki;
+  *kd = _Kd;
+}
+
 void AutoPID::setBangBang(double bangOn, double bangOff) {
   _bangOn = bangOn;
   _bangOff = bangOff;
