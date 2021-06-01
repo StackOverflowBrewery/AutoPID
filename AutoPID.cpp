@@ -6,7 +6,7 @@
 
 #ifdef ESP_PLATFORM
 unsigned long millis() {
-  return (unsigned long)esp_timer_get_time()/1000;
+  return (unsigned long)(esp_timer_get_time()/1000);
 }
 
 template<class T>
