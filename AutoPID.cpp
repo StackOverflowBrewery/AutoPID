@@ -2,11 +2,12 @@
 #ifdef ESP_PLATFORM
 #include <math.h>
 #include "esp_timer.h"
+#include "esp_system.h"
 #endif
 
 #ifdef ESP_PLATFORM
-unsigned long millis() {
-  return (unsigned long)(esp_timer_get_time()/1000);
+unsigned long IRAM_ATTR millis() {
+  return (unsigned long)(esp_timer_get_time()/1000ULL);
 }
 
 template<class T>
